@@ -1,0 +1,73 @@
+{
+  "name": "suite25519",
+  "version": "1.0.0",
+  "description": "Suite25519 is a cryptography module using @noble libraries, featuring key algorithms like Curve25519 (ed25519, x25519), ECIES, and AES-SIV. It provides essential functionalities for key management, digital signatures (Ed25519), and encryption for secure communications.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/suite25519.esm.js",
+      "require": "./dist/suite25519.cjs.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build:esm": "esbuild src/suite25519.js --bundle --outfile=dist/suite25519.esm.js --platform=browser --format=esm --minify --sourcemap",
+    "build:cjs": "esbuild src/suite25519.js --bundle --outfile=dist/suite25519.cjs.js --platform=node --format=cjs --target=node16 --sourcemap",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "format": "prettier --write \"src/**/*.js\" \"*.{js,json,md}\" --ignore-path .gitignore",
+    "format:check": "prettier --check \"src/**/*.js\" \"*.{js,json,md}\" --ignore-path .gitignore",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "prepublishOnly": "npm run format:check && npm run lint && npm test && npm run build"
+  },
+  "jest": {
+    "transform": {},
+    "testEnvironment": "jest-environment-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LEA-Blockchain/suite25519.git"
+  },
+  "homepage": "https://github.com/LEA-Blockchain/suite25519#readme",
+  "keywords": [
+    "cryptography",
+    "Curve25519",
+    "ed25519",
+    "x25519",
+    "ECIES",
+    "AES-SIV",
+    "EdDSA",
+    "signatures",
+    "encryption",
+    "getlea"
+  ],
+  "author": {
+    "name": "Allwin Ketnawang",
+    "url": "https://getlea.org"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.2",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1"
+  },
+  "dependencies": {
+    "@noble/ciphers": "^1.2.1",
+    "@noble/curves": "^1.8.2",
+    "@noble/hashes": "^1.7.2",
+    "cbor-x": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
