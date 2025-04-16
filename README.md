@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@leachain%2fsuite25519.svg)](https://www.npmjs.com/package/@leachain/suite25519)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-**Suite25519** is a modern, cryptographic library built upon the highly-regarded [@noble/ciphers](https://github.com/paulmillr/noble-ciphers), [@noble/curves](https://github.com/paulmillr/noble-curves), and [@noble/hashes](https://github.com/paulmillr/noble-hashes), using [cbor-x](https://github.com/kriszyp/cbor-x) for CBOR serialization. It provides a straightforward API for essential cryptographic operations using secure and efficient algorithms, developed as part of the **Getleá ([getlea.org](https://getlea.org))** RWA crypto project.
+**Suite25519** is a modern, cryptographic library built upon the highly-regarded [@noble/ciphers](https://github.com/paulmillr/noble-ciphers), [@noble/curves](https://github.com/paulmillr/noble-curves), and [@noble/hashes](https://github.com/paulmillr/noble-hashes), using [cbor-x](https://github.com/kriszyp/cbor-x) for CBOR serialization. It provides a straightforward API for essential cryptographic operations using secure and efficient algorithms, developed as part of the **LEA ([getlea.org](https://getlea.org))** RWA crypto project.
 
 ## Features
 
