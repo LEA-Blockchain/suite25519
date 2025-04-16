@@ -1,7 +1,7 @@
 {
-  "name": "suite25519",
-  "version": "1.0.0",
-  "description": "Suite25519 is a cryptography module using @noble libraries, featuring key algorithms like Curve25519 (ed25519, x25519), ECIES, and AES-SIV. It provides essential functionalities for key management, digital signatures (Ed25519), and encryption for secure communications.",
+  "name": "@leachain/suite25519",
+  "version": "1.0.1",
+  "description": "Isomorphic Ed25519/X25519 crypto suite (signing, ECIES w/ AES-SIV)",
   "type": "module",
   "exports": {
     ".": {

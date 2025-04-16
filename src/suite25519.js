@@ -198,7 +198,7 @@ class BinaryData {
 
 // Specific data types inherit but add little functionality here
 // Could add validation (e.g., length checks) if needed
-class Signature extends BinaryData { }
+class Signature extends BinaryData {}
 
 // Message class handles string conversion
 export class Message extends BinaryData {
